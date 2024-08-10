@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 # Load the dataset
 @st.cache_data
 def load_data():
-    data = pd.read_excel('data/NonRevenue Water Data(1).xlsx')
+    data = pd.read_excel('data/Non Revenue Water Data(1).xlsx')
     data['Time'] = pd.to_datetime(data['Time'])
     # Drop unnamed columns and the 'Anomalous' column
     data = data.loc[:, ~data.columns.str.contains('^Unnamed')]
